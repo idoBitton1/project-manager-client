@@ -33,4 +33,16 @@ export const useStyles = makeStyles()((theme) => ({
     submitButton: {
         margin: theme.spacing(3, 0, 2),
     },
+    alert: {
+        marginBottom: theme.spacing(2),
+    },
+    navigationBox: {
+        marginTop: theme.spacing(2),
+        textAlign: 'center',
+    },
+    navigationLink: {
+        textDecoration: 'none',
+        color: theme.palette.primary.main,
+        fontWeight: 'bold',
+    },
 }));
