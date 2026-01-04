@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, Controller } from 'react-hook-form';
 import { Container, Paper, TextField, Button, Box, Typography, Alert } from '@mui/material';
@@ -102,6 +102,15 @@ const LoginPage: React.FC = () => {
               {loading ? 'Logging in...' : 'Login'}
             </Button>
           </form>
+
+          <Box style={{ marginTop: '16px', textAlign: 'center' }}>
+            <Typography variant="body2">
+              Don't have an account?{' '}
+              <Link to="/register" style={{ textDecoration: 'none', color: '#1976d2', fontWeight: 'bold' }}>
+                Register here
+              </Link>
+            </Typography>
+          </Box>
         </Paper>
       </Box>
     </Container>

@@ -6,14 +6,21 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 73px)',
+        overflow: 'auto',
     },
     paper: {
-        padding: theme.spacing(4),
+        padding: theme.spacing(3),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
+        maxWidth: '100%',
+        margin: 'auto',
+        '@media (min-width: 480px)': {
+            maxWidth: '400px',
+            padding: theme.spacing(4),
+        },
     },
     title: {
         marginBottom: theme.spacing(3),

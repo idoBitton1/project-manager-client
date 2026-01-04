@@ -25,7 +25,7 @@ const AuthorizedPage: React.FC = () => {
 
     return (
         <Container component="main" maxWidth="sm">
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 73px)' }}>
                 <Paper elevation={3} sx={{ padding: 4, textAlign: 'center' }}>
                     <Typography variant="h4" component="h1">
                         Authorized!

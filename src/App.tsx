@@ -7,6 +7,7 @@ import { useAuthInit } from './hooks/useAuthInit';
 import LoginPage from './components/authentication/login/loginPage';
 import RegisterPage from './components/authentication/register/registerPage';
 import AuthorizedPage from './components/authentication/authorized/authorizedPage';
+import Header from './components/common/Header';
 import { isLoadingAtom, isAuthenticatedAtom } from './atoms/authentication/authAtoms';
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className={classes.appContainer}>
+        <Header />
         <Routes>
           <Route path="/login" element={isAuthenticated ? <Navigate to="/authorized" /> : <LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
