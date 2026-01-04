@@ -46,28 +46,28 @@ const RegisterPage: React.FC = () => {
     };
 
     return (
-        <Container component="main" maxWidth="sm">
+        <Container component='main' maxWidth='sm'>
             <Box className={classes.container}>
                 <Paper elevation={3} className={classes.paper}>
-                    <Typography component="h1" variant="h5" className={classes.title}>
+                    <Typography component='h1' variant='h5' className={classes.title}>
                         Register
                     </Typography>
 
-                    {error && <Alert severity="error" style={{ marginBottom: '16px' }}>{error}</Alert>}
-                    {success && <Alert severity="success" style={{ marginBottom: '16px' }}>Registration successful!</Alert>}
+                    {error && <Alert severity='error' className={classes.alert}>{error}</Alert>}
+                    {success && <Alert severity='success' className={classes.alert}>Registration successful!</Alert>}
 
                     <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
                         <Controller
-                            name="name"
+                            name='name'
                             control={control}
                             render={({ field }) => (
                                 <TextField
                                     {...field}
-                                    margin="normal"
+                                    margin='normal'
                                     fullWidth
-                                    label="Name"
-                                    type="text"
-                                    autoComplete="name"
+                                    label='Name'
+                                    type='text'
+                                    autoComplete='name'
                                     error={!!errors.name}
                                     helperText={errors.name?.message}
                                 />
@@ -75,16 +75,16 @@ const RegisterPage: React.FC = () => {
                         />
 
                         <Controller
-                            name="email"
+                            name='email'
                             control={control}
                             render={({ field }) => (
                                 <TextField
                                     {...field}
-                                    margin="normal"
+                                    margin='normal'
                                     fullWidth
-                                    label="Email Address"
-                                    type="email"
-                                    autoComplete="email"
+                                    label='Email Address'
+                                    type='email'
+                                    autoComplete='email'
                                     error={!!errors.email}
                                     helperText={errors.email?.message}
                                 />
@@ -92,16 +92,16 @@ const RegisterPage: React.FC = () => {
                         />
 
                         <Controller
-                            name="password"
+                            name='password'
                             control={control}
                             render={({ field }) => (
                                 <TextField
                                     {...field}
-                                    margin="normal"
+                                    margin='normal'
                                     fullWidth
-                                    label="Password"
-                                    type="password"
-                                    autoComplete="new-password"
+                                    label='Password'
+                                    type='password'
+                                    autoComplete='new-password'
                                     error={!!errors.password}
                                     helperText={errors.password?.message}
                                 />
@@ -109,10 +109,10 @@ const RegisterPage: React.FC = () => {
                         />
 
                         <Button
-                            type="submit"
+                            type='submit'
                             fullWidth
-                            variant="contained"
-                            color="primary"
+                            variant='contained'
+                            color='primary'
                             className={classes.submitButton}
                             disabled={loading}
                         >
@@ -120,10 +120,10 @@ const RegisterPage: React.FC = () => {
                         </Button>
                     </form>
 
-                    <Box style={{ marginTop: '16px', textAlign: 'center' }}>
-                        <Typography variant="body2">
-                            Already have an account?{' '}
-                            <Link to="/login" style={{ textDecoration: 'none', color: '#1976d2', fontWeight: 'bold' }}>
+                    <Box className={classes.navigationBox}>
+                        <Typography variant='body2'>
+                            <span>Already have an account? </span>
+                            <Link to='/login' className={classes.navigationLink}>
                                 Login here
                             </Link>
                         </Typography>
